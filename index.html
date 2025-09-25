@@ -21,17 +21,22 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #F8F7F4;
+            background-color: #eff6ff; /* Light Blue Background */
             color: #1f2937;
         }
         .nav-link {
             transition: all 0.3s;
             cursor: pointer;
             border-bottom: 2px solid transparent;
+            color: #d1d5db; /* Light gray for default nav links */
+            padding-bottom: 4px;
         }
-        .nav-link:hover, .nav-link.active {
-            color: #2563EB;
-            border-bottom-color: #2563EB;
+        .nav-link:hover {
+            color: #ffffff; /* White on hover */
+        }
+        .nav-link.active {
+            color: #60a5fa; /* Lighter Blue for active link */
+            border-bottom-color: #60a5fa;
         }
         .pillar-card {
             transition: transform 0.3s, box-shadow 0.3s;
@@ -49,7 +54,7 @@
             height: 10px;
             background-color: #2563EB;
             border-radius: 50%;
-            border: 2px solid #F8F7F4;
+            border: 2px solid #eff6ff; /* Match body background */
         }
         .chart-container {
             position: relative;
@@ -76,10 +81,10 @@
 </head>
 <body class="antialiased">
 
-    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-gray-800">NexInn </h1>
-            <div class="hidden md:flex items-center space-x-8">
+    <header class="bg-blue-900 sticky top-0 z-50 shadow-md">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAACTFBMVEX////9+Pj67e7g2du8r7r36er/+/v79PTu4+Lx5+XUys757/D06Oj38/P9/f36+vrx8vLy9PTg4eL3+Pj89vbw6+3Bv8HAv7/CzM7t7u/Jzc/KztDHzc7w8fH+/v729vbP0dLU1dbX2Nnb3d7e3+Dh4uPk5ebl5ufn6Orp6uvr7O3t7u/w8PHy8/T19vf4+fn6+/v8/P39/f7+/v////9aW11bXF5fYGJhY2VjZGVlZ2hpa2xtbm9wb3FydHV1eHt9fYB+gIGCg4SEhYaHiImKi4yNjo+QkZKTlJeYmZqbnJ2eoKGio6SlpqeoqaqrrK2vsLKztLa4ubq7vL2+v8DBwsPFx8jJy8zNzs/Q0dLT1NTW19jZ2tvc3d7f4OHi4+Tm5+jp6uvs7e7v8fLz9PX29/j5+vv8/f5NTk9PUFFSU1RVVldYWVpcXF9fYGFiY2VlZ2lqa21ub3Bxc3R1dnh5ent8fX5/gIGCg4WIiYqLjI2Oj5CRkpOUlZaYmZqbnJ2en6Gio6SlpqeoqaqrrK2ur7Cys7S1tre4ubq7vL2+v8DBwsPExcbHyMnKy8zOzs/R0tPU1dbY2drb3N3f4OHj5OTo6evs7e7v8fLz9PX3+Pn7/P1RU1NVVldYWVpbXF5fYGJhY2VjZGVlZ2hpa2xtbm9wb3FydHV1dnh5ent8fX5/gIGCg4SEhYaHiImKi4yNjo+QkZKTlJeYmZqbnJ2en6Gio6SlpqeoqaqrrK2ur7Cys7S1tre4ubq7vL2+v8DBwsPFx8jJy8zOzs/Q0dLT1NXW19jZ2tvc3d7f4OHi4+Tm5+jp6uvs7e7w8PHy8/T19vf5+vv8/f5/gYKEhIXi4uLIyMjBwcLz8/P29vby8vLq6ury8/Tm5uahr7S2t7rOztDV1tj39/fq7O28vb5ZWltgYGG5uLnY2Nrg4ODl5eX8/Pz09fXv7+/s7Ozo6Ojl5ubg4ODc3Nza2trX1tfa29zLy8zGxsfAwMDW19vR0tPNzs/p6uzJzc+pq62Mjo/i5OXo6uysrrN4enxydXjMztTExsfv8fLq7O75+vza3d9CQ0V+gYTs7u4AAACJjI45PUBCREdxcXGAgIDk5OTc3NzQ0NDFxcXMzMzb29ve3t7m5ubq6urw8PD19fX4+Pj6+vr////7+/sdJYUBAAABaUlEQVR4nO3dCXbaQBSA4aYSVkBURAVBwML93+BKe3u2Ie/S3nL/T2dngQe+XxkDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMA/5Pmc7/v+t/xYn+f5/b4/v+5n3/c/+75f92d/y/Nzvue9uF7n+Z734ve6n/c9/5/vxe+143nev78Xv9a253nf/S5e+Xv7m+d9/rvc+Xv7e57nff+7mHde/u553vfvxd/fG8/7/vV6fX/P877/vXh8/zDP++9X6/3zPO//78Xz/Zk873+v13fP87z/3y/2Z/M8779er0/yPO//78Xz/Zk8739/tT5J8r7/+3Xjff9kP/c3/31P8r7/3y/2Z/M87/v/2+d/8jzv+1/t5/szeZ735/mffJ7n/f/t8z95nvdnhp8/+TzP+/+7J58heZ73/0e/kPzO833/272fN/lcnu/9k8+QvM57M+VPnu/73+0neZ73Z/yfmT8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAwH/0B+3k+tC/y+LFAAAAAElFTkSuQmCC" alt="NexInn Logo" class="h-10 w-auto">
+            <div class="hidden md:flex items-center space-x-8 ml-auto">
                 <a class="nav-link active" data-target="challenge">The Challenge</a>
                 <a class="nav-link" data-target="solution">The Solution</a>
                 <a class="nav-link" data-target="impact">The Impact</a>
@@ -215,8 +220,9 @@
         </div>
     </main>
 
-    <footer class="bg-gray-800 text-white">
+    <footer class="bg-blue-900 text-white">
         <div class="container mx-auto px-6 py-12 text-center">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAACTFBMVEX////9+Pj67e7g2du8r7r36er/+/v79PTu4+Lx5+XUys757/D06Oj38/P9/f36+vrx8vLy9PTg4eL3+Pj89vbw6+3Bv8HAv7/CzM7t7u/Jzc/KztDHzc7w8fH+/v729vbP0dLU1dbX2Nnb3d7e3+Dh4uPk5ebl5ufn6Orp6uvr7O3t7u/w8PHy8/T19vf4+fn6+/v8/P39/f7+/v////9aW11bXF5fYGJhY2VjZGVlZ2hpa2xtbm9wb3FydHV1eHt9fYB+gIGCg4SEhYaHiImKi4yNjo+QkZKTlJeYmZqbnJ2eoKGio6SlpqeoqaqrrK2vsLKztLa4ubq7vL2+v8DBwsPFx8jJy8zNzs/Q0dLT1NTW19jZ2tvc3d7f4OHi4+Tm5+jp6uvs7e7v8fLz9PX29/j5+vv8/f5NTk9PUFFSU1RVVldYWVpcXF9fYGFiY2VlZ2lqa21ub3Bxc3R1dnh5ent8fX5/gIGCg4WIiYqLjI2Oj5CRkpOUlZaYmZqbnJ2en6Gio6SlpqeoqaqrrK2ur7Cys7S1tre4ubq7vL2+v8DBwsPExcbHyMnKy8zOzs/R0tPU1dbY2drb3N3f4OHj5OTo6evs7e7v8fLz9PX3+Pn7/P1RU1NVVldYWVpbXF5fYGJhY2VjZGVlZ2hpa2xtbm9wb3FydHV1dnh5ent8fX5/gIGCg4SEhYaHiImKi4yNjo+QkZKTlJeYmZqbnJ2en6Gio6SlpqeoqaqrrK2ur7Cys7S1tre4ubq7vL2+v8DBwsPFx8jJy8zOzs/Q0dLT1NXW19jZ2tvc3d7f4OHi4+Tm5+jp6uvs7e7w8PHy8/T19vf5+vv8/f5/gYKEhIXi4uLIyMjBwcLz8/P29vby8vLq6ury8/Tm5uahr7S2t7rOztDV1tj39/fq7O28vb5ZWltgYGG5uLnY2Nrg4ODl5eX8/Pz09fXv7+/s7Ozo6Ojl5ubg4ODc3Nza2trX1tfa29zLy8zGxsfAwMDW19vR0tPNzs/p6uzJzc+pq62Mjo/i5OXo6uysrrN4enxydXjMztTExsfv8fLq7O75+vza3d9CQ0V+gYTs7u4AAACJjI45PUBCREdxcXGAgIDk5OTc3NzQ0NDFxcXMzMzb29ve3t7m5ubq6urw8PD19fX4+Pj6+vr////7+/sdJYUBAAABaUlEQVR4nO3dCXbaQBSA4aYSVkBURAVBwML93+BKe3u2Ie/S3nL/T2dngQe+XxkDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMA/5Pmc7/v+t/xYn+f5/b4/v+5n3/c/+75f92d/y/Nzvue9uF7n+Z734ve6n/c9/5/vxe+143nev78Xv9a253nf/S5e+Xv7m+d9/rvc+Xv7e57nff+7mHde/u553vfvxd/fG8/7/vV6fX/P877/vXh8/zDP++9X6/3zPO//78Xz/Zk873+v13fP87z/3y/2Z/M8779er0/yPO//78Xz/Zk8739/tT5J8r7/+3Xjff9kP/c3/31P8r7/3y/2Z/M87/v/2+d/8jzv+1/t5/szeZ735/mffJ7n/f/t8z95nvdnhp8/+TzP+/+7J58heZ73/0e/kPzO833/272fN/lcnu/9k8+QvM57M+VPnu/73+0neZ73Z/yfmT8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAwH/0B+3k+tC/y+LFAAAAAElFTkSuQmCC" alt="NexInn Logo" class="h-16 w-auto mx-auto mb-6">
             <h3 class="text-3xl font-bold">Ready for Transformation?</h3>
             <p class="mt-3 max-w-2xl mx-auto">Let's schedule a meeting to present a live demonstration of our platform and discuss a customized financial model for this partnership.</p>
             <div class="mt-8">
@@ -228,8 +234,8 @@
                 <p class="text-gray-400 mb-4">Connect with us</p>
                 <div class="flex justify-center space-x-6">
                     <a href="#" class="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Twitter</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Website</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">YouTube</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
                 </div>
             </div>
         </div>
@@ -396,7 +402,7 @@ document.addEventListener('DOMContentLoaded', function () {
             datasets: [{
                 data: [kpiData.year1.retention, 100 - kpiData.year1.retention],
                 backgroundColor: ['#2563EB', '#e5e7eb'],
-                borderColor: '#F8F7F4',
+                borderColor: '#eff6ff',
                 borderWidth: 4,
             }]
         },
@@ -410,7 +416,7 @@ document.addEventListener('DOMContentLoaded', function () {
             datasets: [{
                 data: [kpiData.year1.satisfaction, 10 - kpiData.year1.satisfaction],
                 backgroundColor: ['#10b981', '#e5e7eb'],
-                borderColor: '#F8F7F4',
+                borderColor: '#eff6ff',
                 borderWidth: 4,
             }]
         },
